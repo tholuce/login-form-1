@@ -1,0 +1,15 @@
+.button {
+    background: var(--common-gradient);
+    cursor: pointer;
+    display: flex;
+    position: relative;
+    width: 100%;
+    border-radius: 5px;
+    justify-content: center;
+
+    & > span {
+        color: white;
+        font-size: 28px;
+        margin: 15px 0;
+    }
+}

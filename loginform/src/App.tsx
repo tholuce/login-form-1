@@ -1,26 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Switcher from './components/switcher/Switcher';
+import styles from './App.module.scss';
+import Input from './components/input/Input';
+import Button from './components/button/Button';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <div className={styles.login}>
+      <div className={styles.panel}>
+        <p className={styles.header}>Login Form</p>
+        <Switcher />
+        <Input />
+        <Input />
+        <a className={styles.forgot} href='#'>Forgot Password?</a>
+        <Button />
+        <p className={styles.member}>Not a member? <span><a className={styles.link} href='#'>Sign up now</a></span></p>
+      </div>
+    </div>;
 }
 
 export default App;

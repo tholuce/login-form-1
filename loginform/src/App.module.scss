@@ -1,0 +1,72 @@
+
+
+.login {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: var(--common-gradient);
+
+  & > .panel {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 35vw;
+    height: fit-content;
+    background: white;
+    padding: 50px 25px;
+    border-radius: 5px;
+    align-items: center;
+
+      & > .header {
+        margin-top: 0;
+        color: black;
+        text-align: center;
+        font-size: 40px;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+       
+      &  > .forgot {
+        color: var(--left-color);
+        text-decoration: none;
+        display: flex;
+        margin-top: 0;
+        margin-bottom: 30px;
+        font-size: 18px;
+        align-self: baseline;
+    }
+
+    & > .member {
+        margin: 25px;
+        font-size: 18px;
+
+        & > span > .link {
+          color: var(--left-color);
+          text-decoration: none;
+        }
+    }
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .login > .panel {
+    width: 25vw;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .login > .panel {
+    width: 50vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .login > .panel {
+    width: 75vw;
+  }
+}

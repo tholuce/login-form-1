@@ -1,0 +1,45 @@
+
+.input {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: relative;
+    width: calc(100% - 30px);
+    padding: 15px;
+    margin: 15px 0;
+
+    & > .label {
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        left: 15px;
+        transform: translate(0, -50%);
+        color: gray;
+        pointer-events: none;
+        background: white;
+        font-size: 24px;
+        transition: transform ease-in-out .3s;  
+        padding: 0 5px;
+
+        &.label_up {
+            transform: translate(0, -50px);
+            transition: transform ease-in-out .3s;
+        }
+    }
+
+    & > input {
+        z-index: 1;
+        border: none;
+        box-shadow: none;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        color: gray;
+        font-size: 24px;
+        outline: 0;
+
+        &:focus + .label {
+            transform: translate(0, -50px);
+            transition: transform ease-in-out .3s;
+        }
+    }
+}
